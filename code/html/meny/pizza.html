@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../../media/img/logo_variants/stationen_logo_top_page.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../css/index.css">
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+
+    <style>
+      @media only screen and (max-width: 700px){
+        .hrTest{
+          display: none;
+        }
+      }
+    </style>
+
+    <title>Stationen | God mat i centrum</title>
+</head>
+<body>
+  <a id="topButton" href="#top"></a>
+
+
+<div id="topBar">
+  <div class="topBarContent">
+    <header>
+      <i><span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+          <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+          <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+        </svg>
+
+        <a href="tel:+463647488" class="tel">036-474 88</a>
+      </span></i>
+
+      <i><span id="openingHoursContainer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+          <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+        </svg>
+        
+        <span id="openingHours">Mån-Tor: 11:30 - 21:00</span>
+      </span></i>
+    </header>
+
+    <div>
+      <ul>
+        <li class="instagram"><a target="_blank" href="https://www.instagram.com/Stationenrestaurang/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+        </svg></a></li>
+        
+        <li class="facebook"><a target="_blank" href="https://www.facebook.com/stationen2021/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_transition=0&show_community_review_changes=0&show_follower_visibility_disclosure=0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+        </svg></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+  
+
+<div class="stickySection">
+  <div><a id="name" href="../index.html">Stationen</a></div>
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ebae59;" id="bootstrapHamburgerMenu">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html#meny">Meny <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html#tider">Öppetider</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html#bestalla">Beställa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.google.com/maps/place/Stationen+Habo/@57.9068015,14.0773614,19z/data=!4m5!3m4!1s0x465a6888e8d119df:0x7922df89f4232d69!8m2!3d57.906602!4d14.0770786" target="_blank">Hitta hit</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html#motOss">Möt Oss</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  
+  <nav>
+    <a class="nav forResponsitivity" href='../index.html#motOss'>Möt oss</a>
+    <a class="nav forResponsitivity" target="_blank" href="https://www.google.com/maps/place/Stationen+Habo/@57.9068015,14.0773614,19z/data=!4m5!3m4!1s0x465a6888e8d119df:0x7922df89f4232d69!8m2!3d57.906602!4d14.0770786">Hitta hit</a>
+    <a class="nav forResponsitivity" href="../index.html#bestalla">Beställa</a>
+    <a class="nav forResponsitivity" href="../index.html#tider">Öppetider</a>
+    <a class="nav forResponsitivity" href="../index.html#meny">Meny</a>
+    <a class="nav forResponsitivity" id="back" href="../index.html">&#11164;&emsp;Gå tillbaka</a>
+  </nav>
+</div>
+
+  <div class="bigBlack" style="height: auto">
+        
+        <div style="display: none;">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span>
+        </div> 
+        
+
+        <div class="pizzaMeny">
+        <div class="container"> 
+          <div class="row d-flex justify-content-center">
+            <div class="col-10 pb-5 text-center">
+              <h1>Meny</h1>
+              <br>
+              <br>
+              <hr style="border-color: #ebae59;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Mat meny -->
+        <div class="matNav largeScreen">
+          <hr class="hrTest" style="border-color: wheat; width: 50%;">
+          <nav>
+            <a class="nav" href='#extraTillbehor'>Extra Tillbehör</a>
+            <a class="nav" href="#vegetariskt">Vegetariskt</a>
+            <a class="nav" href="#sallad">Sallad</a>
+            <a class="nav" href="#aLaCarte">À La Carte</a>
+            <a class="nav" href="#kebab">Kebab</a>
+            <a class="nav" href="#pizza">Pizza</a>
+          </nav>
+          <br>
+          <a id="pizza"></a>
+          <hr class="hrTest" style="border-color: wheat; width: 50%;">
+        </div>
+        
+        
+        <!-- Pizzor -->
+        <div class="row d-flex justify-content-center pizzaMenyMarginTop">
+          <div class="col-10 pb-5 text-center">
+            <h4 class="text-center text-uppercase">Pizzameny</h4>
+            <p class="description samtliga">i samtliga pizzor ingår tomat och ost</p>
+           
+            <p><span class="nummer">1.</span>&emsp;Margarita&emsp;<span class="price">95 :-</span></p>
+            <p class="description">Mozzarella, gouda</p>
+
+            <p><span class="nummer">2.</span>&emsp;Vesuvio&emsp;<span class="price">100 :-</span></p>
+            <p class="description">Skinka</p>
+
+            <p><span class="nummer">3.</span>&emsp;Capricciosa&emsp;<span class="price">100 :-</span></p>
+            <p class="description">Skinka, champinjoner</p>
+
+            <p><span class="nummer">4.</span>&emsp;Hawaii&emsp;<span class="price">100 :-</span></p>
+            <p class="description">Skinka, ananas</p>
+
+            <p><span class="nummer">5.</span>&emsp;Tomaso&emsp;<span class="price">100 :-</span></p>
+            <p class="description">Skinka, räkor</p>
+
+            <p><span class="nummer">6.</span>&emsp;<span class="inbakad">Calzone</span>&emsp;<span class="price">100 :-</span></p>
+            <p class="description">Skinka</p>
+
+            <p><span class="nummer">7.</span>&emsp;Pescatore&emsp;<span class="price">100 :-</span></p>
+            <p class="description">Tonfisk</p>
+
+            <p><span class="nummer">8.</span>&emsp;Bolognese&emsp;<span class="price">110 :-</span></p>
+            <p class="description">Köttfärs</p>
+
+            <p><span class="nummer">9.</span>&emsp;Lamafia&emsp;<span class="price">100 :-</span></p>
+            <p class="description">Bacon, lök</p>
+
+            <p><span class="nummer">10.</span>&emsp;Salami&emsp;<span class="price">105 :-</span></p>
+            <p class="description">Salami, paprika, lök</p>
+
+            <p><span class="nummer">11.</span>&emsp;Love You&emsp;<span class="price">105 :-</span></p>
+            <p class="description">Tonfisk, räkor, lök</p>
+
+            <p><span class="nummer">12.</span>&emsp;Tropical&emsp;<span class="price">105 :-</span></p>
+            <p class="description">Skinka, banan, ananas, curry</p>
+
+            <p><span class="nummer">13.</span>&emsp;Disco&emsp;<span class="price">110 :-</span></p>
+            <p class="description">Skinka, räkor, köttfärs</p>
+
+            <p><span class="nummer">14.</span>&emsp;Jamaica&emsp;<span class="price">110 :-</span></p>
+            <p class="description">Skinka, champinjoner, räkor</p>
+
+            <p><span class="nummer">15.</span>&emsp;<span class="inbakad">Ciao Ciao</span>&emsp;<span class="price">110 :-</span></p>
+            <p class="description">Lök, champinjoner, fläskfilé, vitlök</p>
+
+            <p><span class="nummer">16.</span>&emsp;Mexicana&emsp;<span class="price">110 :-</span></p>
+            <p class="description">Paprika, köttfärs, jalapeño, vitlök, tacokrydda</p>
+
+            <p><span class="nummer">17.</span>&emsp;Kebabpizza&emsp;<span class="price">110 :-</span></p>
+            <p class="description">Kebabkött, kebabsås</p>
+
+            <p><span class="nummer">18.</span>&emsp;Kycklingpizza&emsp;<span class="price">110 :-</span></p>
+            <p class="description">Kyckling, lök, champinjoner, färska tomater</p>
+
+            <p><span class="nummer">19.</span>&emsp;Napoli&emsp;<span class="price">110 :-</span></p>
+            <p class="description">Kyckling, champinjoner, tomat, curry, kebabsås</p>
+
+            <p><span class="nummer">20.</span>&emsp;Indi&emsp;<span class="price">110 :-</span></p>
+            <p class="description">Kyckling, banan, jordnötter, curry</p>
+
+            <p><span class="nummer">21.</span>&emsp;Isabella&emsp;<span class="price">110 :-</span></p>
+            <p class="description">Vegetarisk med färska inlagda grönsaker i</p>
+            <p class="description" id="longText">olivsås</p>
+
+            <p><span class="nummer">22.</span>&emsp;J-Södra&emsp;<span class="price">115 :-</span></p>
+            <p class="description">Kebabkött, pommes, kebabsås</p>
+
+            <p><span class="nummer">23.</span>&emsp;HV71&emsp;<span class="price">115 :-</span></p>
+            <p class="description">Kebabkött, isbergsallad, kebabsås</p>
+
+            <p><span class="nummer">24.</span>&emsp;Batman&emsp;<span class="price">115 :-</span></p>
+            <p class="description">Kebabkött, skinka, kebabsås</p>
+
+            <p><span class="nummer">25.</span>&emsp;Quatro Stagioni&emsp;<span class="price">115 :-</span></p>
+            <p class="description">Skinka, champinjoner, räkor, musslor</p>
+
+            <p><span class="nummer">26.</span>&emsp;Frutti Di Mare&emsp;<span class="price">115 :-</span></p>
+            <p class="description">Havets läckerheter</p>
+
+            <p><span class="nummer">27.</span>&emsp;Marina&emsp;<span class="price">120 :-</span></p>
+            <p class="description">Fläskfilé, sparris, räkor, bearnaisesås</p>
+
+            <p><span class="nummer">28.</span>&emsp;Dragons&emsp;<span class="price">120 :-</span></p>
+            <p class="description">Skinka, lök, fläskfilé, champinjoner, bearnaisesås</p>
+
+            <p><span class="nummer">29.</span>&emsp;Milano&emsp;<span class="price">120 :-</span></p>
+            <p class="description">Kebabkött, pommes, isbergsallad, kebabsås</p>
+
+            <p><span class="nummer">30.</span>&emsp;Italiano&emsp;<span class="price">120 :-</span></p>
+            <p class="description">Serranoskinka, soltorkade tomater, fetaost,</p>
+            <p class="description" id="longText">ruccolasallad</p>
+
+            <p><span class="nummer">31.</span>&emsp;Amore&emsp;<span class="price">120 :-</span></p>
+            <p class="description">Oxfilé, soltorkade tomater, ruccolasallad</p>
+
+            <p><span class="nummer">32.</span>&emsp;Habo Wolley&emsp;<span class="price">120 :-</span></p>
+            <p class="description">Fläskfilé, skinka, champinjoner, lök,</p>
+            <p class="description" id="longText">ruccolasallad, bearnaisesås</p>
+
+            <p><span class="nummer">33.</span>&emsp;Habo IF&emsp;<span class="price">120 :-</span></p>
+            <p class="description">Kebabkött, skinka, ananas, lök, kebabsås</p>
+
+            <p><span class="nummer">34.</span>&emsp;<span class="inbakad">Niños Special.</span>&emsp;<span class="price">120 :-</span></p>
+            <p class="description">Kebabkött, ananas, kebabsås</p>
+
+            <p><span class="nummer">35.</span>&emsp;Stationen&emsp;<span class="price">120 :-</span></p>
+            <p class="description">Oxfilé, färska champinjoner, färsk paprika, räkor,</p>
+            <p class="description" id="longText">bearnaisesås</p>
+
+            <p><span class="nummer">36.</span>&emsp;Habo Friidrott&emsp;<span class="price">120 :-</span></p>
+            <p class="description">Kebabkött, champinjoner, lök, isbergsallad,</p>
+            <p class="description" id="longText">tomat, pommes, kebabsås</p>
+
+            <p><span class="nummer">37.</span>&emsp;Ostia&emsp;<span class="price">120 :-</span></p>
+            <p class="description">Mozzarella, gouda gorgonzola, fetaost</p>
+
+            <p><span class="nummer">38.</span>&emsp;Huset&emsp;<span class="price">120 :-</span></p>
+            <a id="kebab"></a>
+            <p class="description">Mozzarella, oxfilé, fläskfilé, champinjoner,</p>
+            <p class="description" id="longText">bearnaisesås</p>
+
+          </div>
+        </div>
+
+        <!-- Kebab -->
+        <div class="row d-flex justify-content-center">
+          <div class="col-10 pb-5 text-center">
+            <h4 class="text-center text-uppercase">Kebab</h4>
+
+            <p>Kebab i bröd&emsp;<span class="price">95 :-</span></p>
+
+            <p>Kebabrulle&emsp;<span class="price">110 :-</span></p>
+
+            <p>Kebabtallrik&emsp;<span class="price">110 :-</span></p>
+
+            <a id="aLaCarte"></a>
+
+            <p>Kebabtallrik med ris&emsp;<span class="price">110 :-</span></p>
+
+          </div>
+        </div>
+
+        <!-- À La Carte -->
+        <div class="row d-flex justify-content-center">
+            <div class="col-10 pb-5 text-center">
+              <h4 class="text-center text-uppercase">À&ensp;la&ensp;carte</h4>
+  
+              <p>Classic Steak (fläskfilé)&emsp;<span class="price">169 :-</span></p>
+              <p class="option">Classic Steak (oxfilé)&emsp;<span class="price">219 :-</span></p>
+              <p class="description">Classic Steak serveras med béarnaisesås, tomat</p>
+              <p class="description" id="longText">& löksallad samt kan väljas mellan</p>
+              <p class="description" id="longText">stekt potatis eller klyftpotatis</p>
+
+              <p>Fish n'chips (krispfriterad fiskfilé)&emsp;<span class="price">149 :-</span></p>
+              <p class="option">Fish n'chips (ungsstekt lax)&emsp;<span class="price">179 :-</span></p>
+              <p class="description">Fish n'chips serveras med citronsås eller krämig</p>
+              <p class="description" id="longText">aioli & pommes frites</p>
+
+              <p>Chicken pasta&emsp;<span class="price">159 :-</span></p>
+              <p class="option">Creamy beef&emsp;<span class="price">189 :-</span></p>
+              <p class="description">Krämig pasta med oxfilé eller kyckling, champinjoner,</p>
+              <p class="description" id="longText">paprika & rödlök toppad med persilja,</p>
+              <p class="description" id="longText">parmesan & svartpeppar</p>
+
+              <p>Plankstek med tillbehör&emsp;</p>
+              <p class="option">(laxfilé)&emsp;<span class="price">169 :-</span></p>
+              <p class="option">(fläskfilé)&emsp;<span class="price">179 :-</span></p>
+              <p class="option">(oxfilé)&emsp;<span class="price">219 :-</span></p>
+
+              <p>Hemmagjord Schnitzel&emsp;<span class="price">169 :-</span></p>
+              <p class="description">Kan väljas mellan stekt potatis eller pommes</p>
+              <p class="description" id="longText">frites, serveras med bearnaisesås</p>
+
+              <p>Hemmagjorda Smash Burger&emsp;<span class="price"></span></p>
+              <p class="option"><span class="nummer">1.</span>&emsp;Classic&emsp;<span class="price">119 :-</span></p>
+              <p class="description">100g burgare, hamburgare dressing, kripssallad,</p>
+              <p class="description" id="longText">lök, tomat & pommes frites</p>
+              <p class="option"><span class="nummer">2.</span>&emsp;Bacon Burger&emsp;<span class="price">129 :-</span></p>
+              <p class="description">160g burgare med knaperstekt bacon, bbq-sås, cheddarost,</p>
+              <p class="description" id="longText">krämig aioli, krispsallad & pommes frites</p>
+              <p class="option"><span class="nummer">3.</span>&emsp;Double Cheese&emsp;<span class="price">149 :-</span></p>
+              <p class="description">Två 100g burgare med smält cheddarost, picklad gurka,</p>
+              <a id="sallad"></a>
+              <p class="description" id="longText">stekt lök samt, hamburgare dressing,</p>
+              <p class="description" id="longText">krispsallad & pommes frites</p>
+  
+            </div>
+          </div>
+
+        <!-- Sallad -->
+        <div class="row d-flex justify-content-center"> 
+          <div class="col-10 pb-5 text-center">
+            <h4 class="text-center text-uppercase">Sallad</h4>
+
+            <p>Kombinera din egen sallad&emsp;<span class="price">110 :-</span></p>
+            <a id="vegetariskt"></a>
+            <p class="description">Välj fem stycken valfria ingredienser och en dressing</p>
+            <p class="description">Som bas ingås sallad, tomat och gurka</p>
+          </div>
+        </div>
+
+        <!-- Vegetariskt -->
+        <div class="row d-flex justify-content-center">
+            <div class="col-10 pb-5 text-center">
+              <h4 class="text-center text-uppercase">Vegetariskt</h4>
+             
+              <p>Falafelrulle&emsp;<span class="price">90 :-</span></p>
+              <a id="extraTillbehor"></a>
+              <p>Falafeltallrik&emsp;<span class="price">95 :-</span></p>
+              
+            </div>
+        </div>
+
+        <!-- Extra Tillbehör -->
+        <div class="row d-flex justify-content-center">
+            <div class="col-10 pb-5 text-center">
+              <h4 class="text-center text-uppercase">Extra Tillbehör</h4>
+             
+              <p>Skinka&emsp;<span class="price">10 :-</span></p>
+              <p>Ost&emsp;<span class="price">10 :-</span></p>
+              <p>Sås&emsp;<span class="price">10 :-</span></p>
+              <p>Kebabkött&emsp;<span class="price">20 :-</span></p>
+              
+            </div>
+          </div>
+        </div>
+
+  </div>
+  
+
+
+  <footer>
+
+    <div class="footer-left">
+
+      <a href="#"><img class="footerLogo" src="../../../media/img/logo_variants/stationen_med_och_utan_bakgrund_utan_skugga.png" alt="Stationens logotype som liknar en pizza"></a>
+
+      <p class="footer-links">
+        
+        <a href="#meny" class="link-1">Meny</a>
+      
+        <a href="#tider">Öppetider</a>
+      
+        <a href="#bestalla">Beställa</a>
+        
+        <a target="_blank" href="https://www.google.com/maps/place/Stationen+Habo/@57.9068015,14.0773614,19z/data=!4m5!3m4!1s0x465a6888e8d119df:0x7922df89f4232d69!8m2!3d57.906602!4d14.0770786">Hitta Hit</a>
+        
+        <a href="#motOss">Möt oss</a>
+      </p>
+
+      <p class="footer-company-name">Stationen © 2022</p>
+    </div>
+
+    <div class="footer-center">
+
+      <div>
+        <a target="_blank" href="https://www.google.com/maps/place/Stationen+Habo/@57.9068015,14.0773614,19z/data=!4m5!3m4!1s0x465a6888e8d119df:0x7922df89f4232d69!8m2!3d57.906602!4d14.0770786"><i class="fa fa-map-marker"></i></a>
+        <a target="_blank" href="https://www.google.com/maps/place/Stationen+Habo/@57.9068015,14.0773614,19z/data=!4m5!3m4!1s0x465a6888e8d119df:0x7922df89f4232d69!8m2!3d57.906602!4d14.0770786"><p><span>Jönköpingsvägen 14</span>566 31 Habo, Jönköping</p></a>
+      </div>
+
+      <div>
+        <a href="tel:+463647488"><i class="fa fa-phone"></i></a>
+        <a href="tel:+463647488"><p>036-474 88</p></a>
+      </div>
+
+      <div>
+        <a href="mailto:stationen.habo@outlook.com"><i class="fa fa-envelope"></i></a>
+        <p><a href="mailto:stationen.habo@outlook.com">stationen.habo@outlook.com</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about"><span>Om oss</span>Restaurang & Sportbar i Habo.<br>À la carte, lunch, sportbar & pizzeria.</p>
+
+      <div class="footer-icons">
+
+        <a target="_blank" href="https://www.instagram.com/Stationenrestaurang/"><i class="fa fa-instagram"></i></a>
+        <a target="_blank" href="https://www.facebook.com/stationen2021/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_transition=0&show_community_review_changes=0&show_follower_visibility_disclosure=0"><i class="fa fa-facebook"></i></a>
+
+      </div>
+
+    </div>
+
+</footer>
+
+
+<header class="credits" id="credits">
+  <p class="creds">en hemsida av Axel Lindh&emsp;&emsp;<a href="tel:+46735049228" class="creds">073 - 504 92 28</a>&emsp;&emsp;<a class="creds" href="mailto:actually.lindh@gmail.com">actually.lindh@gmail.com</a></p>
+</header>
+
+
+
+<script src="../../js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

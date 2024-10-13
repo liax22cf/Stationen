@@ -1,0 +1,1294 @@
+/* Logga */
+@font-face{
+  font-family: "insecure";
+  src: url('../../font/insecure-font/Insecure-rgWJO.ttf');
+}
+/* Rubriker/underrubriker */
+@font-face{
+  font-family: "sedgwick";
+  src: url('../../font/Sedgwick_Ave/SedgwickAve-Regular.ttf');
+}
+/* Nav knappar */
+@font-face{
+  font-family: "film-cryptic";
+  src: url('../../font/film-cryptic/Filmcryptic.ttf');
+}
+/* Meny underrubriker */
+@font-face{
+  font-family: "satisfy";
+  src: url('../../font/satisfy/Satisfy-Regular.ttf');
+}
+*{
+  box-sizing: border-box;
+  margin: 0px;
+}
+:root {
+  --default: #ca9d5d;
+  --defaultDark: #bb8b49;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: #d4a15a  ;
+}
+::-moz-selection{
+  color: #1a1827;
+  background: #ebae59;
+}
+::selection{
+  color: #1a1827;
+  background: #ebae59;
+}
+
+
+
+.bigBlack{
+  width: 80%;
+  height: 3500px;
+  position: relative;
+  background-color: #211f29; /* #1a1827 */
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 10px 10px 10px;
+}
+
+
+
+#topButton{
+  display: inline-block;
+  background-color: #211f29;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 40%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 110;
+  text-decoration: none;
+}
+#topButton::after{
+  content: "\f077";
+  font-family: 'FontAwesome';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #ffffff;
+}
+#topButton:hover{
+  background-color: #f1c689;
+}
+#topButton:hover::after{
+  color: #211f29;
+}
+#topButton:active{
+  background-color: #555555;
+}
+#topButton.show{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.slides{
+  display: none;
+}
+img.slideImage{
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  border-bottom: 5px solid #a8a8a8;
+  padding: 10px;
+}
+.slideshowContainer{
+  position: relative;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.text{
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.logo{
+  position: absolute;
+  width: 29%;
+  margin-right: auto;
+  margin-left: auto;
+
+  top: 210px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logoDiv{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50px;
+  left: 51%;
+  z-index: 8;
+}
+
+
+
+/* Fade in animation för loggan */
+#body{
+  animation: fadeInAnimation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  width: 100%;
+  height: 500px;
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+
+.dot{
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active{
+  background-color: #717171;
+}
+.fade{
+  animation-name: fade;
+  animation-duration: 8s;
+}
+@keyframes fade{
+  from {opacity: .7} 
+  to {opacity: 1}
+}
+/* Mindre skärmar */
+@media only screen and (max-width: 300px){
+  .text {font-size: 11px}
+}
+
+
+
+.stickySection{
+  background-color: #1a1827;
+  width: 100%;
+  color: #ffffff; 
+  border-bottom: solid hsl(0, 0%, 66%);
+  position: -webkit-sticky;
+  position: sticky;
+  overflow: hidden;
+  top: 0px;
+  z-index: 10;
+  /* padding: 2px; */ /* <- test för att undvika att nav-bar blev större vid addering av border vid hover över a taggarna i nav */
+}
+#bootstrapHamburgerMenu{
+  display: none;
+}
+
+.polaroidImages{
+  display: block;
+}
+
+
+
+/* läggs på med js */
+.navOpacity{
+  background-color: rgba(26, 24, 39, 0.9);
+}
+/* .stickyNavBarScrolledStyle{
+  font-size: 10px;
+  background-color: blue;
+}*/
+
+.pizzaMenyMarginTop{
+  margin-top: 250px;
+}
+.matNav{
+  margin-bottom: 15%;
+  margin-top: -2%;
+}
+.matNav nav{
+  margin-right: 17%;
+}
+.matNav a{
+  color: #f0ba6e;
+  margin: 10px;
+  margin-top: 20px;
+}
+nav a{
+  float: right;
+  text-decoration: none; 
+  color: #e7e7e7;
+  font-size: 18px; 
+  transition: all 0.5s ease 0s;
+  margin-left: 3%;
+  margin-top: 2.5%;
+}
+img.eatPizza{
+  height: 50%;
+  width: 50%;
+  display: block;
+  margin-top: -5%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow:
+    -50px -50px 0 -40px var(--default),
+    50px 50px 0 -40px var(--defaultDark);
+}
+#name{
+  font-size: 50px;
+  float: left;
+  padding: 10px; 
+  margin-left: 10%;
+  font-family: 'insecure';
+  color: #ebae59;
+  text-decoration: none;
+}
+a.nav{
+  font-family: 'film-cryptic';
+  font-size: 25px;
+}
+nav{
+  margin-right: 14%;
+}
+nav a:hover{
+  border-bottom: solid #c6934c;
+  text-decoration: none;
+  color: #f5deb3;
+}
+a#back{
+  color: #ebae59;
+  border-bottom: none;
+}
+#topBar{
+  background-color: #ebae59;
+}
+#topBar .topBarContent{
+  display: flex;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-between;
+  padding: 10px 0px 0px 0px;
+}
+#topBar div, header{
+  z-index: 15;
+}
+#topBar #openingHoursContainer{
+  margin-left: 30px;
+}
+#topBar header{
+  display: inline;
+}
+#topBar ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+#topBar .bi-clock{
+  margin-bottom: 4px;
+}
+#topBar .bi-phone{
+  margin-bottom: 4px;
+}
+a[href^="tel:"] {
+  text-decoration: underline;
+  color: #212529;
+}
+
+
+
+/* Meny */
+h1{
+  font-family: 'sedgwick';
+  color: #e7e7e7;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  margin-top: 8%;
+  font-size: 70px;
+  line-height: 40px;
+  width: 25%;
+}
+.motOssH1, .bestallaH1{
+  margin-top: 200px;
+  width: 100%;
+}
+.oppetiderH1{
+  margin-bottom: 150px;
+}
+.menyHeader{
+  margin-top: 15%;
+}
+.menyHeader a{
+  text-decoration: none;
+  color: #ffffff;
+}
+.hrTest{
+  width: 80%;
+  margin-top: 6%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.hrImg{
+  margin-top: 4%;
+}
+h2{
+  color: #ecaa4e;
+  text-align: center;
+  font-family: 'safety';
+  font-size: 37px;
+  text-transform: uppercase;
+}
+p.motOssText{
+  color: #cf9b51;
+  text-align: center;
+  font-size: 22px;
+  margin-top: 20px;
+  font-family: 'safety';
+}
+h2.telephone{
+  color: #ebae59;
+  font-family: 'film-cryptic';
+  font-size: 70px;
+  font-weight: 580;
+  margin-top: 20px;
+  text-decoration: underline 1px wheat;
+}
+h2 span{
+  color: #9a743f;
+}
+svg{
+  text-decoration: none;
+  color: #212529;
+  margin-bottom: 4px;
+}
+svg.mat{
+  color: #ebae59;
+}
+li.instagram{
+  margin-right: 15px;
+}
+ul.sortersMat a{
+  color: #e7e7e7; /* pizzor meny på index sida */
+}
+ul.sortersMat{
+  list-style: none;
+}
+
+
+
+/* Pizzameny */
+h4{
+  font-size: 40px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: #ffffff;
+  margin-bottom: 1.5%;
+}
+.pizzaMeny{
+  color: #e7e7e7;
+}
+.samtliga{
+  margin-bottom: 30px;
+}
+.pizzaMeny p{
+  font-family: 'Garamond';
+  font-size: x-large;
+  color: #ebae59;
+  /* text-transform: uppercase; */ /* Detta blev fult men det är ett alternativ */
+}
+.pizzaMeny .price{
+  color: #ffffff;
+}
+p.description{
+  color: #c7c7c7;
+  opacity: 70%;
+  font-size: 20px;
+  margin-top: -17px;
+}
+#longText{
+  margin-top: -22px;
+}
+.option{
+  margin-top: -21px;
+}
+
+
+
+/* Öppetider */
+table{
+  width: 50%;
+  margin-top: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 30px;
+  font-family: 'Garmond';
+  color: #ebae59;
+  border: #ebae59 solid 2px;
+}
+table ul{
+  list-style: none;
+}
+
+
+
+/* Polaroid images */
+.wrapper {
+  width: 100%;
+  padding: 0 2rem;
+  text-align: center;
+}
+.polaroid {
+  background: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+}
+.polaroid > img{
+  max-width: 100%;
+  height: auto;
+}
+.caption {
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2em;
+}
+.item {
+  width: 30%;
+  display: inline-block;
+  margin-top: 2rem;
+  filter: grayscale(100%);
+}
+.item1{
+  margin-left: 200px;
+}
+.item:nth-of-type(4n+4) {
+  transform: scale(0.8, 0.8) rotate(3deg);
+  transition: all 0.35s;
+}
+  
+.item:nth-of-type(4n+3) {
+  transform: scale(0.8, 0.8) rotate(-3deg);
+  transition: all 0.35s;
+}
+
+
+
+footer{
+	background: #1a1827;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  border-top: solid #a8a8a8;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+/* Vänster del */
+.footer-left, .footer-center, .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+.footer-left{
+	width: 40%;
+}
+.footerLogo{
+  width: 60%;
+  height: 60%;
+}
+.footer-links{
+	color:  #ebae59;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+.footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+.footer-company-name{
+	color:  #cccccc;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+/* Mitten del */
+.footer-center{
+	width: 35%;
+}
+.footer-center i{
+	background-color:  #983E29;
+	color: #cccccc;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+.footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+.footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+.footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+.footer-center p a{
+	color:  #b7461e;
+	text-decoration: none;
+}
+.footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #ffffff;
+  display: inline-block;
+  padding-right: 5px;
+}
+.footer-links .link-1:before {
+  content: none;
+}
+/* Höger del */
+.footer-right{
+	width: 20%;
+}
+.footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+.footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.footer-icons{
+	margin-top: 25px;
+}
+.footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color: #983E29;
+  color: #cccccc;
+	border-radius: 2px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+
+
+/* Anime.js boxarna */
+#boxes{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+#buttons{
+  padding: 20px;
+  background: #ebae59;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+#buttons button{
+  background: #1a1827;
+  padding: 5px 10px;
+  border: 0;
+}
+#buttons .fa{
+  font-size: 30px;
+}
+#buttons .fa-play-circle{
+  color: #ffffff;
+}
+#buttons .fa-pause-circle{
+  color: #ffffff;
+}
+.box{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 4px;
+  display: inline-block;
+}
+
+
+#matNav{
+  display: block;
+}
+#matNav2{
+  display: none;
+}
+#matNav3{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul.polaroidImages{
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+  margin-left: 25%;
+}
+
+li.polaroidList{
+  text-align: center;
+  display: inline-block;
+  list-style: none;
+  border: solid 12px #fff;
+  background: #ffffff;
+
+  
+  top:50px;
+}
+
+li.polaroidList:nth-child(1){
+    transform: rotate(10deg);
+}
+
+li.polaroidList:nth-child(2){
+    transform: rotate(0deg);
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 880px){
+	footer{
+		font: bold 14px sans-serif;
+	}
+	.footer-left, .footer-center, .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+	.footer-center i{
+		margin-left: 0;
+	}
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .logo{
+    width: 55%;
+  }
+  #topButton{
+    display: none;
+  }
+  .stickySection a.nav{
+    display: none;
+  }
+  #bootstrapHamburgerMenu{
+    display: block;
+    z-index: 20;
+    float: right;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-right: 62px;
+  }
+  #bootstrapHamburgerMenu li{
+    margin-right: 50px;
+    width: 120px;
+  }
+  #bootstrapHamburgerMenu a{
+    text-align: center;
+  }
+  .polaroidImages{
+    display: none;
+  }
+  h1{
+    font-size: 35px;
+    margin-right: 43%;
+  }
+  #openingHoursContainer{
+    display: block;
+  }
+  .matNav nav{
+    margin-right: 29%;
+    margin-bottom: 50px;
+  }
+  .matNav a{
+    margin-top: 6px;
+    font-size: 25px;
+  }
+  .hrImg{
+    margin-top: 20px;
+  }
+  a.nav{
+    font-size: 10px;
+  }
+  a.forResponsitivity{
+    /* margin-top: 35px; */
+    font-size: 15px;
+  }
+  #back{
+    margin-right: 0%;
+    display: block;
+  }
+  .item1{
+    margin-left: 20%;
+  }
+  h2.telephone{
+    font-size: 30px;
+  }
+  .bigBlack{
+    height: 3500px;
+  }
+  header.credits{
+    height: 50px;
+  }
+
+  .polaroid{
+    display: none;
+  }
+  h2.welcome{
+    font-size: 30px;
+  }
+
+  #matNav2 a.tillbehor span{
+    display: none;
+  }
+  #matNav{
+    display: none;
+  }
+  #matNav2{
+    display: block;
+    margin-top: -50px;
+  }
+  #matNav2 hr{
+    display: none;
+  }
+  .matNav2 nav{
+    line-height: 100px;
+    margin-right: 180px;
+    margin-left: auto;
+  }
+}
+@media only screen and (min-width: 400px) {
+  a.nav{
+    font-size: 25px;
+  }
+  .bigBlack{
+    height: 3000px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #matNav{
+    display: block;
+  }
+  #matNav2{
+    display: none;
+  }
+  .bigBlack{
+    height: 2300px;
+  }
+  ul.polaroidImages{
+    display: none;
+  }
+  img.eatPizza{
+    display: none;
+  }
+  .hrImg{
+    display: none;
+  }
+}
+/* Small devices */
+@media only screen and (min-width: 600px) {
+  .logo{
+    width: 55%;
+  }
+  #topButton{
+    display: none;
+  }
+  h1{
+    font-size: 45px;
+    margin-right: 43%;
+  }
+  /* .matNav nav{
+    width: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 50px;
+  } */
+  #matNav nav{
+    margin-right: 15%;
+  }
+  .matNav a{
+    margin-top: 6px;
+    font-size: 25px;
+    margin-bottom: -10px;
+  }
+  a.nav{
+    font-size: 30px;
+  }
+  a.forResponsitivity{
+    /* margin-top: 35px; */
+    font-size: 25px;
+  }
+  #back{
+    margin-right: 23%;
+    display: none;
+  }
+  .item1{
+    margin-left: 20%;
+  }
+  h2.telephone{
+    font-size: 40px;
+  }
+  .bigBlack{
+    height: 3900px;
+  }
+  .polaroid{
+    display: none;
+  }
+  
+  #matNav2 a.tillbehor span{
+    display: none;
+  }
+
+  #matNav{
+    display: none;
+  }
+  #matNav2{
+    display: block;
+    margin-top: -50px;
+  }
+  #matNav2 hr{
+    display: none;
+  }
+  .matNav2 nav{
+    line-height: 100px;
+    margin-right: 180px;
+    margin-left: auto;
+  }
+  /* img.eatPizza{
+    height: 50%;
+    width: 50%;
+    display: block;
+    margin-top: -5%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow:
+      -50px -50px 0 -40px var(--default),
+      50px 50px 0 -40px var(--defaultDark);
+  } */
+}
+/* Medium devices */
+@media only screen and (min-width: 700px){
+  .logo{
+    width: 55%;
+  }
+  .matNav nav{
+    margin-right: 0%;
+  }
+  .matNav a{
+    font-size: 18px;
+  }
+  h1{
+    margin-right: 39%;
+  }
+  #matNav{
+    display: block;
+  }
+  #matNav2{
+    display: none;
+  }
+
+  .polaroid{
+    display: block;
+  }
+  .bigBlack{
+    height: 3400px;
+  }
+}
+@media only screen and (min-width: 768px){
+  #topButton{
+    display: inline-block;
+    margin-right: -15px;
+  }
+  .logo{
+    width: 55%;
+  }
+  h1{
+    font-size: 60px;
+  }
+  .matNav nav{
+    margin-right: 6%;
+  }
+  .matNav a{
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  a.nav{
+    font-size: 18px;
+  }
+  a.forResponsitivity{
+    margin-top: 35px;
+    font-size: 19px;
+  }
+  #back{
+    margin-right: 23%;
+  }
+  .item1{
+    margin-left: 20%;
+  }
+  h2.telephone{
+    font-size: 40px;
+  }
+  .bigBlack{
+    height: 4000px;
+  }
+
+  .polaroid{
+    display: block;
+  }
+
+  #matNav{
+    display: block;
+  }
+  #matNav2{
+    display: none;
+  }
+}
+/* Large devices */
+@media only screen and (min-width: 900px){
+  .logo{
+    width: 29%;
+  }
+  .matNav nav{
+    margin-right: 11%;
+  }
+}
+@media only screen and (min-width: 992px){
+  .logo{
+    width: 29%;
+  }
+  #topButton{
+    display: inline-block;
+  }
+  h1{
+    font-size: 55px;
+  }
+  .matNav nav{
+    margin-right: 7%;
+  }
+  .matNav a{
+    margin-top: 10px;
+    font-size: 24px;
+  }
+  a.forResponsitivity{
+    margin-top: 30px;
+    font-size: 19px;
+  }
+  #back{
+    display: block;
+    margin-right: 0%;
+  }
+  h2.telephone{
+    font-size: 45px;
+  }
+  .bigBlack{
+    height: 4000px;
+  }
+
+  .polaroid{
+    display: block;
+  }
+
+
+  #matNav{
+    display: block;
+  }
+  #matNav2{
+    display: none;
+  }
+}
+@media only screen and (min-width: 1100px){
+  .logo{
+    width: 29%;
+  }
+  #topButton{
+    display: inline-block;
+  }
+  h1{
+    font-size: 110px;
+  }
+  .matNav nav{
+    margin-right: 10%;
+  }
+  a.nav{
+    font-size: 20px;
+  }
+  .matNav a{
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  a.forResponsitivity{
+    margin-top: 30px;
+    font-size: 22px;
+  }
+  h2.telephone{
+    font-size: 60px;
+  }
+  .bigBlack{
+    height: 4000px;
+  }
+
+
+  .polaroid{
+    display: block;
+  }
+
+  #matNav{
+    display: block;
+  }
+  #matNav2{
+    display: none;
+  }
+}
+/* Extra large devices */
+@media only screen and (min-width: 1200px){
+  .logo{
+    width: 29%;
+  }
+  .matNav nav{
+    margin-right: 8%;
+  }
+  a.nav{
+    font-size: 29px;
+  }
+  a.forResponsitivity{
+    font-size: 24px;
+  }
+  h2.telephone{
+    font-size: 65px;
+  }
+
+
+  .polaroid{
+    display: block;
+  }
+
+  #matNav{
+    display: block;
+  }
+  #matNav2{
+    display: none;
+  }
+}
+@media only screen and (min-width: 1300px){
+  .logo{
+    width: 29%;
+  }
+  .matNav nav{
+    margin-right: 11%;
+  }
+  a.nav{
+    font-size: 30px;
+  }
+  a.forResponsitivity{
+    font-size: 25px;
+  }
+  h2.telephone{
+    font-size: 65px;
+  }
+
+  .polaroid{
+    display: block;
+  }
+
+  #matNav{
+    display: block;
+  }
+  #matNav2{
+    display: none;
+  }
+}
+@media only screen and (min-width: 1400px){
+  .logo{
+    width: 29%;
+  }
+  a.nav{
+    font-size: 30px;
+  }
+  .bigBlack{
+    height: 4200px;
+  }
+
+  .polaroid{
+    display: block;
+  }
+
+  #matNav{
+    display: block;
+  }
+  #matNav2{
+    display: none;
+  }
+}
+@media only screen and (min-width: 1280px){
+  .logo{
+    width: 29%;
+  }
+  .matNav nav{
+    margin-right: 11%;
+  }
+  a.nav{
+    font-size: 29px;
+  }
+  a.forResponsitivity{
+    font-size: 24px;
+  }
+  h2.telephone{
+    font-size: 68px;
+  }
+  .bigBlack{
+    height: 5000px;
+  }
+
+  .polaroid{
+    display: block;
+  }
+
+  #matNav{
+    display: block;
+  }
+  #matNav2{
+    display: none;
+  }
+}
+/* Huge devices */
+@media only screen and (min-width: 1920px) {
+  .logo{
+    width: 29%;
+  }
+  .matNav nav{
+    margin-right: 10%;
+  }
+  .largeScreen nav{
+    margin-right: 20%;
+  }
+  a.nav{
+    font-size: 25px;
+  }
+  .matNav a{
+    margin-top: 10px;
+    font-size: 35px;
+  }
+  .largeScreen a{
+    margin-top: 20px;
+  }
+  h2.telephone{
+    font-size: 75px;
+  }
+  .bigBlack{
+    height: 5000px;
+  }
+
+  .polaroid{
+    display: block;
+  }
+
+
+  #matNav{
+    display: block;
+  }
+  #matNav2{
+    display: none;
+  }
+}
+
+
+
+
+/* Credits at the bottom */
+header.credits{
+  text-align: center;
+  background-color: #cccccc;
+  height: 25px;
+}
+header.credits a{
+  display: inline;
+}
+header#credits p.creds::selection, a.creds::selection{
+  color: gold;
+  background: black;
+}
+header#credits::-moz-selection{
+  color: #1a1827;
+  background: #cccccc;
+}
+a.creds{
+  color: #1a1827;
+  text-decoration: underline;
+}
+header.credits p{
+  color: #211f29;
+  font-weight: 500;
+}
