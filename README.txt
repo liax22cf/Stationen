@@ -4,7 +4,7 @@ Slutdatum: 21-07-2022
 Estimerad utvecklingstid: 40 timmar.
 
 Estimerat värde på hemsidan av Linus Rudbeck & Daniel Fransend på Redcapes: 25000Kr
-Estimerat värde på logotypen av Linus Rudbeck & Daniel Fransed på Redcapes: 200000Kr
+Estimerat värde på logotypen av Linus Rudbeck & Daniel Fransed på Redcapes: 20000Kr
 
 
 
